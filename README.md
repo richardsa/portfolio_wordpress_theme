@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+Hi, this is a custom theme used for my portfolio website at https://richardsaldivar.me.
+
+The theme was developed using _S (underscores).  See below for more information.
+
+
 
 _s
 ===
