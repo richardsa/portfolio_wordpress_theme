@@ -1,0 +1,45 @@
+#temperature {
+  height: 30px;
+  padding-bottom: 50px;
+  font-size: 50px;
+}
+
+#information {
+  padding:20px;
+}
+
+#main-display {
+  padding: 50px;
+  font-size: 36px;
+}
+
+
+h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#temp-select {
+  color: purple;
+}
+
+.weather-container {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #ffffff;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  opacity: 0.7;
+  filter: alpha(opacity=70)
+}
+
+img#weather-icon{
+  border-radius: 50%;
+  transform: scale(0.5);
+}

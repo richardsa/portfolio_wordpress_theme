@@ -1,0 +1,786 @@
+/*
+Theme Name: Richie\'s Portfolio Theme
+Theme URI: http://underscores.me/
+Author: Richard Saldivar
+Author URI: http://richardsaldivar.me
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: richies-portfolio-theme
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Richie\'s Portfolio Theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Theme Specific Files
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+	color: white;
+}
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+/* general*/
+body {
+  margin-top: 50px;
+  font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+  font-size: 16px;
+  background: url('/wp-content/themes/richies-portfolio-theme/assets/img/cheap_diagonal_fabric_hf5wvi.png') top left repeat;
+}
+.logged-in .navbar-fixed-top {
+	top:32px;
+}
+/* == global == */
+h1,h2,h3,h4,h5,h6 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1 small {
+  color: white;
+}
+
+h1, h2 {
+  margin: 0 0 40px;
+}
+h3 {
+  margin: 20px 0;
+}
+h4 {
+  font-size:18px;
+}
+
+p {
+  margin: 0 0 15px;
+}
+p.lead {
+  font-weight: normal;
+}
+
+#content {
+  padding: 40px 0;
+}
+
+/* navbar */
+.navbar-inverse {
+	background-color: #00448D;
+}
+
+.navbar-inverse  a:link, .navbar-inverse a:visited, .navbar-inverse .navbar-nav>li>a  {
+  color: #9d9d9d;
+}
+
+.navbar-inverse  a:hover, .navbar-inverse a:hover, .navbar-inverse .navbar-nav>li>a:hover  {
+
+	 color: #ffffff;
+}
+
+/*navbar dropdown */
+ul.dropdown-menu {background-color: #000000;}
+/* widgets */
+.widget {
+  padding: 20px;
+}
+
+.widget h4 {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: solid 1px #00448D;
+}
+
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget ul li {
+  margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+  position: relative;
+  left: 1px;
+}
+
+/* blog post */
+
+.post, .widget, #comments {
+  position: relative;
+  border: solid 1px #ddd;
+  background: white;
+  margin: 0 0 40px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.post header, .post .post-exerpt, .post .post-body, #comments .comments-wrap {
+  padding: 20px;
+}
+
+.post header h1, .post header h3 {
+  margin: 0 0 15px;
+  padding: 0 0 15px;
+  border-bottom: solid 1px #00448D;
+  font-size: 24px;
+}
+
+.post header h1 {
+  border-bottom: solid 1px #ddd;
+}
+
+.post-image img {
+  height: auto;
+}
+
+.post-details {
+  font-size: 12px;
+  width: 90%;
+}
+
+.post-details i.fa {
+  padding-left: 10px;
+}
+
+.post-details i.fa:first-child {
+  padding: 0px;
+}
+
+/* footer */
+footer {
+  background-color: #000000;
+  color: #9d9d9d;
+  padding: 20px 0 10px;
+  font-size: 16px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a:link, footer a:visited {
+  color: #9d9d9d;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+/* footer social */
+/* Footer links */
+/*social icons*/
+footer .fa {
+text-align:center;
+height:35px;
+width:35px;
+line-height:35px;
+border-radius:50%;
+}
+
+html {
+  /*height: 100%;*/
+  font-size: 16px;
+  font-family: 'proxima-nova', 'Raleway', Helvetica, sans-serif;
+  font-weight: 700;
+}
+h1, h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+/* footer */
+
+.footer {
+  position: relative;
+  clear: both;
+  padding-top: 20px;
+  color: #ffffff;
+}
+.footer-left {
+  text-aliign: left;
+}
+.footer a {
+  color: #000000;
+}
+
+/* navbar */
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: #000000;
+  border: none;
+}
+.navbar-default, .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: #9d9d9d;!important;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  background-color: #4F608F;
+  color: #9d9d9d;
+}
+
+/* main section div's */
+
+
+/* main section links white*/
+
+.main-section a {
+  color: #000000;
+  text-decoration: underline;
+}
+.main-section {
+  color: #FFFFFF;
+  min-height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 75px;
+}
+.main-section p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}
+
+/*jumbotron*/
+
+.jumbotron {
+  margin-bottom: 0px;
+}
+.jumbotron hr {
+  max-width: 80%;
+}
+.jumbotron a {
+  text-decoration: none;
+}
+
+/*about section*/
+
+.about img {
+  padding: 10px;
+}
+
+.portfolio {
+  padding: 0;
+}
+
+.contact-section li {
+  padding: 10px;
+}
+.contact-section li button {
+  width: 115px;
+}
+
+/*button styling*/
+
+.btn-default:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/*portfolio */
+
+.portfolio img {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.portfolio img:hover {
+  border: 2px solid #000000;
+  opacity: 1;
+}
+.caption h3 {
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+.footer, .about {
+  background: url('/wp-content/themes/richies-portfolio-theme/assets/img/green_cup_kq4xth.png') top left repeat;
+  color: #000000;
+}
+#dataVis hr {
+  border: 2px solid #000000;
+  max-width: 80%;
+}
+#frontEnd, #dataVis {
+  background: url('/wp-content/themes/richies-portfolio-theme/assets/img/cheap_diagonal_fabric_hf5wvi.png') top left repeat;
+  color: #000000;
+}
+#backEnd, #contact, .jumbotron, .feature-image {
+  background: url('/wp-content/themes/richies-portfolio-theme/assets/img/dark_fish_skin__2X_flbhqo.png') top left repeat;
+  color: #ffffff;
+
+}
+#backEnd a, #contact a, .jumbotron a {
+  color: #ffffff;
+}
+#frontEnd a, #dataVis a {
+  color: #000000;
+}
+
+#frontEnd, #dataVis, #contact, #backEnd, .footer, .feature-image {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* sticky footer stuff from: http://getbootstrap.com/examples/sticky-footer-navbar/*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+	/*padding-bottom: 25px;*/
+  margin-bottom: 150px;
+}
+body.page-template-page-frontend, body.page-template-page-react {
+	padding-bottom: 50px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 150px;
+  background-image: none;
+  background-color: #000000;
+
+}
+/* media queries */
+@media (max-width: 991px) {
+   #primary {
+		 padding: 25px 10px;
+	 }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left, .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    font-size: 30px;
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+}
+
+/* make dropdown menu items larger */;
+@media (max-width: 767px)
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    font-size:16px;
+}
+
+/* fix the top margin when logged in */
+
+@media screen and (max-width : 600px){
+	 .logged-in .navbar-fixed-top {
+	 	padding-top: 46px;
+	 }
+}
+
+
+@media screen and (max-width : 568px) {
+	#instructor .num {
+		height: 100px;
+		width: 100px;
+		font-size: 22px;
+	}
+
+	#instructor .num span {
+		font-size: 16px;
+	}
+
+	.resource {
+		width: 100%;
+		margin-right: 0;
+    min-height: 0;
+	}
+
+  .price h4 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width : 430px) {
+	.social-jumbo {
+		width: 100px;
+		margin: 20px auto;
+		display: block;
+	}
+}

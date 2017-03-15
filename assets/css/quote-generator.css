@@ -1,0 +1,21 @@
+article, .btn-default {
+  font-size:16px;
+  font-family: 'Rock Salt', cursive;
+}
+p { font-family: verdana, sans-serif}
+
+#quote-pad {
+  margin-top:20px;
+  background-color: #041B84;
+  color: #ffffff;
+  padding: 40px 25px;
+  
+  border-radius: 15px;
+}
+.btn-default:hover{
+  background-color: #041B84;
+  color: #ffffff;
+  
+}
+
+article a:hover {text-decoration: none;}

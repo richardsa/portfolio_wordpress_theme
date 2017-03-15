@@ -1,0 +1,33 @@
+.leaderImg {
+  height: 50px;
+  width: 50px;
+  padding-right: 10px;
+}
+
+.recipeList .btn, .modal-body .btn, .ingredientList {
+  margin: 10px;
+}
+
+.recipeContainer {
+  background-color: #ffffff;
+  background-image: none;
+  padding:35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.tableSort:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+textarea {
+  color: #ffffff;
+}
+
+body, .panel-title, .btn {
+  font-size: 20px;
+}

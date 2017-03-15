@@ -1,0 +1,37 @@
+body {
+  font-size: 16px;
+  background-image:none;
+}
+
+.result {
+  margin-bottom: 10px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#search-box {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px;
+}
+
+h3.resultTitle {
+  margin-bottom: 0px;
+}
+
+.resultURL {
+  color: #008000;
+  word-wrap: break-word;
+}
+
+.result {
+  padding: 10px;
+}
+
+.result:hover,
+.result:active,
+.result:focus {
+  background-color: #F1F1F1;
+}

@@ -1,0 +1,59 @@
+body {
+font-size: 16px;
+font-family: sans-serif;
+line-height: 1.6em;
+font-weight: 600;
+}
+
+.displayControls .btn {
+margin: 10px;
+}
+
+.offline,
+.closed,
+.streaming {
+padding: 15px;
+text-align: left;
+margin-top: 3px;
+margin-bottom: 3px;
+}
+
+.offline {
+background-color: #d9edf7;
+}
+
+.offline:hover,
+.offline:active {
+background-color: #bce8f1;
+}
+
+.streaming {
+background-color: #dff0d8;
+}
+
+.streaming:hover,
+.streaming:active {
+background-color: #d6e9c6;
+}
+
+.closed {
+background-color: #f2dede;
+}
+
+.closed:hover,
+.closed:active {
+background-color: #ebccd1;
+}
+
+.jumbotron {
+  background-image: none;
+background-color: #006400;
+color: #ffffff;
+}
+
+@media screen and (max-width:990px) {
+.offline,
+.closed,
+.streaming {
+  text-align: center;
+}

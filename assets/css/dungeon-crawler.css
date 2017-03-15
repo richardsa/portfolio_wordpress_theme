@@ -1,0 +1,103 @@
+/*global variables */
+/*general app container settings */
+.appContainer {
+  width: 1012px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000000;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.entry-content {margin:0px; }
+body {
+  background-color: #000000;
+}
+
+/* title bar */
+.titleBar, .footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.titleBar a {
+  color: #ffffff;
+}
+
+/* stats bar */
+.stats li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+/* darkness overlay */
+.darkness {
+  width: 1012px;
+  height: 700px;
+  z-index: 1;
+  position: absolute;
+  background-color: #000000;
+  margin-top: -5px;
+}
+
+/*general spaces */
+.boardSquare {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #A9A9A9;
+  margin-top: -5px;
+  position: relative;
+}
+
+/* blank spaces */
+.space {
+  background-color: #ffffff;
+}
+
+/* wall blocks */
+.wall {
+  background-color: #000000;
+}
+
+/*hero block*/
+.hero {
+  background-color: #00008B;
+}
+
+/* weapon block */
+.weapon {
+  background-color: #1b7215;
+}
+
+/* portal block */
+.portal {
+  background-color: #FF00FF;
+}
+
+/* potion */
+.potion {
+  background-color: #EB9100;
+}
+
+/* enemy */
+.enemy {
+  background-color: #f43c0e;
+}
+
+/* boss */
+.boss {
+  background-color: #93000c;
+}
+
+/* button */
+button {
+  background-color: #1b7215;
+  margin-left: 20px;
+  font-size: 14px;
+}
